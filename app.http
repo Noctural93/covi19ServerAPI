@@ -1,5 +1,55 @@
-GET "http://localhost:8080/states/"
+GET http://localhost:8080/states/
 Content-Type: application/json
 
 ###
 
+GET http://localhost:8080/states/1/
+Content-Type: application/json
+
+###
+
+POST http://localhost:8080/districts/
+Content-Type: application/json
+
+{
+  "districtName": "Bagalkot",
+  "stateId": 3,
+  "cases": 2323,
+  "cured": 2000,
+  "active": 315,
+  "deaths": 8
+}
+
+###
+
+GET http://localhost:8080/districts/323/
+Content-Type: application/json
+
+###
+
+DELETE http://localhost:8080/districts/321/
+Content-Type: application/json
+
+###
+
+PUT http://localhost:8080/districts/323/
+Content-Type: application/json
+
+{
+  "districtName": "Nadia",
+  "stateId": 3,
+  "cases": 9628,
+  "cured": 6524,
+  "active": 3000,
+  "deaths": 104
+}
+
+###
+
+GET http://localhost:8080/states/1/stats/
+Content-Type: application/json
+
+###
+
+GET http://localhost:8080/districts/323/details/
+Content-Type: application/json
